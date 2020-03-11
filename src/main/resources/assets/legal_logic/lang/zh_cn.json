@@ -1,0 +1,15 @@
+{
+    "itemGroup.legal_logic.base_group": "法则逻辑",
+    "item.legal_logic.lingshi_powder": "灵石粉末",
+    "item.legal_logic.lingshi_powder.tooltip-1": "挖掘下来的灵石磨制成的粉末",
+    "item.legal_logic.lingshi_powder.tooltip-2": "可以缓慢的吸收周围空气中的灵气",
+    "item.legal_logic.lingshi": "%s灵石",
+    "item.legal_logic.lingshi.tooltip-1": "品阶：%s",
+    "item.legal_logic.lingshi.tooltip-2": "完整度：%d%%",
+    "item.legal_logic.lingshi.quality-0": "损坏的",
+    "item.legal_logic.lingshi.quality-4": "天阶",
+    "item.legal_logic.lingshi.quality-3": "地阶",
+    "item.legal_logic.lingshi.quality-2": "玄阶",
+    "item.legal_logic.lingshi.quality-1": "黄阶",
+    "block.legal_logic.lingshi_mine": "灵石矿"
+}

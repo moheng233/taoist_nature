@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "legal_logic:block/lingshi_mine"
+    }
+}
