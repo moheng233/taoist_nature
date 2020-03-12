@@ -26,7 +26,7 @@ public class LingshiOre extends OreBlock {
         // new ItemStack(LegalLogicMod.LINGSHIMINEITEM,1)
         // );
 
-        Dropped.add(new ItemStack(LegalLogicMod.LINGSHIPOWDER, new SRandom().GetRInt(0, 6))
+        Dropped.add(new ItemStack(LegalLogicMod.LINGSHIPOWDER, SRandom.GetRInt(0, 6))
         );
         
         CompoundTag tag = new CompoundTag();

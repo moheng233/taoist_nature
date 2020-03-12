@@ -19,13 +19,20 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.legal_logic.LegalLogicMod"
+      "net.fabricmc.legal_logic.LegalLogicMod",
+      "net.fabricmc.legal_logic.ContainerRegistry"
+    ],
+    "client": [
+      "net.fabricmc.legal_logic.LegalLogicModClient"
+    ],
+    "server": [
+      "net.fabricmc.legal_logic.LegalLogicModServer"
     ]
   },
   "depends": {
     "fabricloader": ">=0.4.0",
     "fabric": "*",
-    "minecraft": "1.14.x"
+    "minecraft": "1.15.x"
   },
   "suggests": {
     "flamingo": "*"

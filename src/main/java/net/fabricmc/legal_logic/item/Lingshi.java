@@ -2,13 +2,18 @@ package net.fabricmc.legal_logic.item;
 
 import java.util.List;
 
+import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
+import net.fabricmc.legal_logic.ContainerRegistry;
 import net.fabricmc.legal_logic.LegalLogicMod;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class Lingshi extends Item {
@@ -65,10 +70,8 @@ public class Lingshi extends Item {
     public Text getName(ItemStack itemStack) {
         CompoundTag tag = itemStack.getTag();
         int quality = 0;
-        int Damage = 0;
         if (tag != null) {
             quality = tag.getInt("quality");
-            Damage = tag.getInt("Damage");
         }
 
         return new TranslatableText("item.legal_logic.lingshi",
@@ -76,13 +79,22 @@ public class Lingshi extends Item {
     }
 
     @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        if (!world.isClient) {
+            ContainerProviderRegistry.INSTANCE.openContainer(ContainerRegistry.FLOURMACHINE, user, (buffer) -> {
+                buffer.writeText(new TranslatableText(this.getTranslationKey()));
+            });
+        }
+        return TypedActionResult.success(user.getMainHandStack());
+
+    }
+
+    @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         CompoundTag tag = itemStack.getTag();
         int quality = 0;
-        int Damage = 0;
         if (tag != null) {
             quality = tag.getInt("quality");
-            Damage = tag.getInt("Damage");
         }
 
         tooltip.add(new TranslatableText("item.legal_logic.lingshi.tooltip-1",
