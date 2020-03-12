@@ -20,8 +20,7 @@ public class LingshiOre extends OreBlock {
     }
 
     @Override
-    public List<ItemStack> getDroppedStacks(net.minecraft.block.BlockState state,
-            net.minecraft.world.loot.context.LootContext.Builder builder) {
+    public List<ItemStack> getDroppedStacks(net.minecraft.block.BlockState state, net.minecraft.loot.context.LootContext.Builder builder) {
         List<ItemStack> Dropped = new ArrayList<ItemStack>();
         // Dropped.add(
         // new ItemStack(LegalLogicMod.LINGSHIMINEITEM,1)
@@ -31,11 +30,10 @@ public class LingshiOre extends OreBlock {
         );
         
         CompoundTag tag = new CompoundTag();
-        tag.putInt("quality", new SRandom().GetRInt(0, 5));
-        tag.putInt("integrity", new SRandom().GetRInt(80, 100));
+        tag.putInt("quality",SRandom.GetRInt(0, 5));
+        tag.putInt("Damage", SRandom.GetRInt(0, 20));
         ItemStack LINGSHI = new ItemStack(LegalLogicMod.LINGSHI);
         LINGSHI.setTag(tag);
-        System.out.println(LINGSHI.getTag());
 
         Dropped.add(LINGSHI);
 
