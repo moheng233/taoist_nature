@@ -1,12 +1,12 @@
 package net.fabricmc.legal_logic.blockentity;
 
+import net.fabricmc.legal_logic.BlockEntityReagistry;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 
 public class ProgramTableEntity extends BlockEntity {
 
-    public ProgramTableEntity(BlockEntityType<?> type) {
-        super(type);
+    public ProgramTableEntity() {
+        super(BlockEntityReagistry.PROGRAMTABLEENTITY);
     }
     
 }

@@ -14,7 +14,6 @@ public class LingshiPowder extends Item
 
     public LingshiPowder(Settings settings) {
         super(settings);
-        // TODO Auto-generated constructor stub
     }
 
     @Override

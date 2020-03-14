@@ -16,7 +16,6 @@ public class LingshiOre extends OreBlock {
 
     public LingshiOre(Settings settings) {
         super(settings);
-        // TODO Auto-generated constructor stub
     }
 
     @Override

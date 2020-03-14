@@ -14,8 +14,10 @@ import net.minecraft.world.World;
 public class Lingshi extends Item {
 
     public Lingshi(Settings settings) {
-        super(settings.maxCount(1).maxDamage(100));
-        // TODO Auto-generated constructor stub
+        super(settings
+            .maxCount(1)
+            .maxDamage(100)
+        );
     }
 
     @Override

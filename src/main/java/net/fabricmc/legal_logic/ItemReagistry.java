@@ -22,6 +22,9 @@ public class ItemReagistry implements ModInitializer {
     public static final BlockItem PORTRAYTABLEITEM = new BlockItem(BlockReagistry.PORTRAYTABLE,
         new Item.Settings().group(LegalLogicMod.LOGICGROUP)
     );
+    public static final BlockItem PROGRAMTABLEITEM = new BlockItem(BlockReagistry.PROGRAMTABLE,
+        new Item.Settings().group(LegalLogicMod.LOGICGROUP)
+    );
 
     public static final String MODID = LegalLogicMod.MODID;//在""中填写Modid
     

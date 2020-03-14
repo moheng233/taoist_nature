@@ -16,6 +16,13 @@ public class BlockReagistry implements ModInitializer {
         
     public static final PortrayTable PORTRAYTABLE = new PortrayTable(
         FabricBlockSettings.of(Material.METAL).build());
+
+    public static final ProgramTable PROGRAMTABLE = new ProgramTable(
+        FabricBlockSettings.of(Material.METAL).build()
+    );
+    public static final Magic MAGIC = new Magic(
+        FabricBlockSettings.of(Material.METAL).build()
+    );
     
 
         public static final String MODID = LegalLogicMod.MODID;//在""中填写Modid
@@ -24,6 +31,7 @@ public class BlockReagistry implements ModInitializer {
         System.out.println("逻辑法则方块初始化开始");
 
         // Block声明
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "magic"), MAGIC);
         Registry.register(Registry.BLOCK, new Identifier(MODID, "lingshi_mine"), LINGSHIMINE);
         Registry.register(Registry.BLOCK, new Identifier(MODID, "portray_table"), PORTRAYTABLE);
     

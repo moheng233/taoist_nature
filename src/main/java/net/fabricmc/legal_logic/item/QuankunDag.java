@@ -14,7 +14,6 @@ public class QuankunDag extends Item {
 
     public QuankunDag(Settings settings) {
         super(settings);
-        // TODO Auto-generated constructor stub
     }
 
     @Override

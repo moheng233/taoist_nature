@@ -1,8 +1,6 @@
 package net.fabricmc.legal_logic.gui;
 
-import net.fabricmc.legal_logic.ItemReagistry;
 import net.fabricmc.legal_logic.blockentity.PortrayTableEntity;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -15,10 +13,8 @@ import net.minecraft.util.math.BlockPos;
 import spinnery.common.BaseContainer;
 import spinnery.common.BaseInventory;
 import spinnery.util.InventoryUtilities;
-import spinnery.widget.WAbstractWidget;
 import spinnery.widget.WInterface;
 import spinnery.widget.WSlot;
-import spinnery.widget.api.Action;
 
 public class PortrayTable extends BaseContainer {
 
