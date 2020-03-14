@@ -25,6 +25,9 @@ public class ItemReagistry implements ModInitializer {
     public static final BlockItem PROGRAMTABLEITEM = new BlockItem(BlockReagistry.PROGRAMTABLE,
         new Item.Settings().group(LegalLogicMod.LOGICGROUP)
     );
+    public static final BlockItem MAGICITEM = new BlockItem(BlockReagistry.MAGIC,
+        new Item.Settings().group(LegalLogicMod.MAGICGROUP)
+    );
 
     public static final String MODID = LegalLogicMod.MODID;//在""中填写Modid
     
@@ -40,8 +43,10 @@ public class ItemReagistry implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier(MODID, "lingshi_mine"),LINGSHIMINEITEM);
         Registry.register(Registry.ITEM, new Identifier(MODID, "lingshi_powder"), LINGSHIPOWDER);
         Registry.register(Registry.ITEM, new Identifier(MODID, "portray_table"), PORTRAYTABLEITEM);
+        Registry.register(Registry.ITEM, new Identifier(MODID, "program_table"), PROGRAMTABLEITEM);
         Registry.register(Registry.ITEM, new Identifier(MODID, "lingshi"), LINGSHI);
         Registry.register(Registry.ITEM, new Identifier(MODID, "qiankun_dag"),QIANKUNDAG);
+        Registry.register(Registry.ITEM, new Identifier(MODID, "magic"), MAGICITEM);
         Registry.register(Registry.ITEM, new Identifier(MODID, "matrixmethod_diagran"), MATRIXMETHODDIAGRAM);
         
         System.out.println("逻辑法则物品初始化结束");

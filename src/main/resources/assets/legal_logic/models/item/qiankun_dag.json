@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "legal_logic:block/portray_table/qiankun_dag",
-		"particle": "legal_logic:block/portray_table/qiankun_dag"
+		"0": "legal_logic:block/qiankun_dag",
+		"particle": "legal_logic:block/qiankun_dag"
 	},
 	"elements": [
 		{

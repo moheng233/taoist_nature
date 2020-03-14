@@ -34,6 +34,7 @@ public class BlockReagistry implements ModInitializer {
         Registry.register(Registry.BLOCK, new Identifier(MODID, "magic"), MAGIC);
         Registry.register(Registry.BLOCK, new Identifier(MODID, "lingshi_mine"), LINGSHIMINE);
         Registry.register(Registry.BLOCK, new Identifier(MODID, "portray_table"), PORTRAYTABLE);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "program_table"), PROGRAMTABLE);
     
         System.out.println("逻辑法则方块初始化结束");
     }

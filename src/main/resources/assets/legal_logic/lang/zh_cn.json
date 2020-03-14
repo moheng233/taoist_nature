@@ -1,5 +1,6 @@
 {
     "itemGroup.legal_logic.base_group": "法则逻辑",
+    "itemGroup.legal_logic.magic_group": "术法",
     "item.legal_logic.lingshi_powder": "灵石粉末",
     "item.legal_logic.lingshi_powder.tooltip-1": "挖掘下来的灵石磨制成的粉末",
     "item.legal_logic.lingshi_powder.tooltip-2": "可以缓慢的吸收周围空气中的灵气",
@@ -14,5 +15,7 @@
     "item.legal_logic.qiankun_dag":"乾坤袋",
     "item.legal_logic.matrixmethod_diagran": "阵法设计图",
     "block.legal_logic.lingshi_mine": "灵石矿",
-    "block.legal_logic.portray_table": "灵阵刻画台"
+    "block.legal_logic.portray_table": "灵阵刻画台",
+    "block.legal_logic.program_table": "灵阵编程台",
+    "block.legal_logic.magic": "阵"
 }

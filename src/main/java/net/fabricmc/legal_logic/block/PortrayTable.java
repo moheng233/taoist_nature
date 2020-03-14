@@ -25,7 +25,6 @@ public class PortrayTable extends Table implements BlockEntityProvider {
 
     @Override
     public BlockEntity createBlockEntity(BlockView blockView) {
-        System.out.println("233");
         return new PortrayTableEntity();
     }
 
