@@ -8,8 +8,8 @@ import spinnery.widget.WSlot;
 import spinnery.widget.api.Position;
 import spinnery.widget.api.Size;
 
-public class FlourMachineScreen extends BaseContainerScreen<FlourMachine> {
-    public FlourMachineScreen(FlourMachine container){
+public class QiankunDagScreen extends BaseContainerScreen<QiankunDag> {
+    public QiankunDagScreen(QiankunDag container) {
         super(container.name, container, container.player);
 
         WInterface mainInterface = getInterface();
@@ -22,7 +22,7 @@ public class FlourMachineScreen extends BaseContainerScreen<FlourMachine> {
         mainInterface.add(mainPanel);
 
         WSlot.addPlayerInventory(Position.of(mainPanel, ((mainPanel.getWidth()) / 2) - (int) (18 * 4.5f), 3 * 18 + 24, 1), Size.of(18, 18), mainInterface);
-        WSlot.addArray(Position.of(mainPanel, 4, 19, 1), Size.of(18, 18), mainInterface, 0, FlourMachine.BACKPACK_INVENTORY, 9, 3);
+        WSlot.addArray(Position.of(mainPanel, 4, 19, 1), Size.of(18, 18), mainInterface, 0, QiankunDag.BACKPACK_INVENTORY, 9, 3);
     
         
     }

@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.fabricmc.legal_logic.LegalLogicMod",
+      "net.fabricmc.legal_logic.ItemReagistry",
+      "net.fabricmc.legal_logic.BlockReagistry",
+      "net.fabricmc.legal_logic.BlockEntityReagistry",
       "net.fabricmc.legal_logic.ContainerRegistry"
     ],
     "client": [

@@ -2,18 +2,13 @@ package net.fabricmc.legal_logic.item;
 
 import java.util.List;
 
-import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
-import net.fabricmc.legal_logic.ContainerRegistry;
-import net.fabricmc.legal_logic.LegalLogicMod;
+import net.fabricmc.legal_logic.ItemReagistry;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class Lingshi extends Item {
@@ -31,35 +26,35 @@ public class Lingshi extends Item {
             tag.putInt("quality", 0);
             tag.putInt("Damage", 0);
 
-            ItemStack itemStack = new ItemStack(LegalLogicMod.LINGSHI);
+            ItemStack itemStack = new ItemStack(ItemReagistry.LINGSHI);
             itemStack.setTag(tag);
             stacks.add(itemStack);
 
             CompoundTag tag1 = new CompoundTag();
             tag1.putInt("quality", 1);
             tag1.putInt("Damage", 0);
-            ItemStack itemStack1 = new ItemStack(LegalLogicMod.LINGSHI);
+            ItemStack itemStack1 = new ItemStack(ItemReagistry.LINGSHI);
             itemStack1.setTag(tag1);
             stacks.add(itemStack1);
 
             CompoundTag tag2 = new CompoundTag();
             tag2.putInt("quality", 2);
             tag2.putInt("Damage", 0);
-            ItemStack itemStack2 = new ItemStack(LegalLogicMod.LINGSHI);
+            ItemStack itemStack2 = new ItemStack(ItemReagistry.LINGSHI);
             itemStack2.setTag(tag2);
             stacks.add(itemStack2);
 
             CompoundTag tag3 = new CompoundTag();
             tag3.putInt("quality", 3);
             tag3.putInt("Damage", 0);
-            ItemStack itemStack3 = new ItemStack(LegalLogicMod.LINGSHI);
+            ItemStack itemStack3 = new ItemStack(ItemReagistry.LINGSHI);
             itemStack3.setTag(tag3);
             stacks.add(itemStack3);
 
             CompoundTag tag4 = new CompoundTag();
             tag4.putInt("quality", 4);
             tag4.putInt("Damage", 0);
-            ItemStack itemStack4 = new ItemStack(LegalLogicMod.LINGSHI);
+            ItemStack itemStack4 = new ItemStack(ItemReagistry.LINGSHI);
             itemStack4.setTag(tag4);
             stacks.add(itemStack4);
         }
@@ -76,17 +71,6 @@ public class Lingshi extends Item {
 
         return new TranslatableText("item.legal_logic.lingshi",
                 new TranslatableText("item.legal_logic.lingshi.quality-" + quality));
-    }
-
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if (!world.isClient) {
-            ContainerProviderRegistry.INSTANCE.openContainer(ContainerRegistry.FLOURMACHINE, user, (buffer) -> {
-                buffer.writeText(new TranslatableText(this.getTranslationKey()));
-            });
-        }
-        return TypedActionResult.success(user.getMainHandStack());
-
     }
 
     @Override
