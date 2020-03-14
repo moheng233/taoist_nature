@@ -1,5 +1,6 @@
 package net.fabricmc.legal_logic.gui;
 
+import net.fabricmc.legal_logic.ItemReagistry;
 import net.fabricmc.legal_logic.blockentity.PortrayTableEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,8 +15,10 @@ import net.minecraft.util.math.BlockPos;
 import spinnery.common.BaseContainer;
 import spinnery.common.BaseInventory;
 import spinnery.util.InventoryUtilities;
+import spinnery.widget.WAbstractWidget;
 import spinnery.widget.WInterface;
 import spinnery.widget.WSlot;
+import spinnery.widget.api.Action;
 
 public class PortrayTable extends BaseContainer {
 
@@ -52,12 +55,32 @@ public class PortrayTable extends BaseContainer {
 
         getInventories().put(BACKPACK_INVENTORY,tableinventory);
 
-        mainInterface.createChild(WSlot.class);
+        mainInterface.createChild(WSlot.class)
+            .setSlotNumber(0)
+            .setInventoryNumber(BACKPACK_INVENTORY);
+        
+        mainInterface.createChild(WSlot.class)
+            .setSlotNumber(1)
+            .setInventoryNumber(BACKPACK_INVENTORY);
 
-        WSlot.addHeadlessArray(mainInterface, 0, BACKPACK_INVENTORY, 3, 1);
+        mainInterface.createChild(WSlot.class)
+            .setSlotNumber(2)
+            .setInventoryNumber(BACKPACK_INVENTORY);
+
+        // WSlot.addHeadlessArray(mainInterface, 0, BACKPACK_INVENTORY, 3, 1);
         WSlot.addHeadlessPlayerInventory(mainInterface);
 
         if(!this.player.world.isClient){
+
+            // for (WAbstractWidget o:mainInterface.getAllWidgets()) {
+            //     WSlot wslot = (WSlot) o;
+            //     if(wslot.getSlotNumber() == 1){
+            //         wslot.accept(ItemReagistry.LINGSHI);
+            //     }
+            //     if(wslot.getSlotNumber() == 2){
+            //         wslot.setLocked(true);
+            //     }   
+            // }
 
             tableinventory.addListener(new InventoryListener(){
                 @Override

@@ -15,7 +15,8 @@ public class ItemReagistry implements ModInitializer {
             new Settings().group(LegalLogicMod.LOGICGROUP));
     public static final Lingshi LINGSHI = new Lingshi(new Settings().group(LegalLogicMod.LOGICGROUP));
     public static final QuankunDag QIANKUNDAG = new QuankunDag(new Settings().group(LegalLogicMod.LOGICGROUP));
-    
+    public static final MatrixMethodDiagram MATRIXMETHODDIAGRAM = new MatrixMethodDiagram(new Settings().group(LegalLogicMod.LOGICGROUP));
+
     public static final BlockItem LINGSHIMINEITEM = new BlockItem(BlockReagistry.LINGSHIMINE,
         new Item.Settings().group(LegalLogicMod.LOGICGROUP));
     public static final BlockItem PORTRAYTABLEITEM = new BlockItem(BlockReagistry.PORTRAYTABLE,
@@ -38,9 +39,9 @@ public class ItemReagistry implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier(MODID, "portray_table"), PORTRAYTABLEITEM);
         Registry.register(Registry.ITEM, new Identifier(MODID, "lingshi"), LINGSHI);
         Registry.register(Registry.ITEM, new Identifier(MODID, "qiankun_dag"),QIANKUNDAG);
+        Registry.register(Registry.ITEM, new Identifier(MODID, "matrixmethod_diagran"), MATRIXMETHODDIAGRAM);
         
-        // BlockEntity声明
-        
+        System.out.println("逻辑法则物品初始化结束");
 	}
 
 }

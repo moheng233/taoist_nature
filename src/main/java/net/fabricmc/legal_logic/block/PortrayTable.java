@@ -25,11 +25,10 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class PortrayTable extends HorizontalFacingBlock implements BlockEntityProvider {
+public class PortrayTable extends Table implements BlockEntityProvider {
 
     public PortrayTable(Settings settings) {
         super(settings);
-        setDefaultState(this.stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
     }
 
     @Override
@@ -48,23 +47,15 @@ public class PortrayTable extends HorizontalFacingBlock implements BlockEntityPr
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
-        stateManager.add(Properties.HORIZONTAL_FACING);
-    }
-
-    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext ctx) {
         double var1 = 1f / 16f;
-        return VoxelShapes.union(VoxelShapes.cuboid(0f, var1 * 11, 0f, 1f, 1f, 1f),
+        return VoxelShapes.union(
+                VoxelShapes.cuboid(0f, var1 * 11, 0f, 1f, 1f, 1f),
                 VoxelShapes.cuboid(0f, 0f, 0f, var1 * 2, var1 * 11, var1 * 2),
                 VoxelShapes.cuboid(var1 * 14, 0f, 0f, 1f, var1 * 11, var1 * 2),
                 VoxelShapes.cuboid(0f, 0f, var1 * 14, var1 * 2, var1 * 11, 1f),
                 VoxelShapes.cuboid(var1 * 14, 0f, var1 * 14, 1f, var1 * 11, 1f));
 
-    }
-
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState) this.getDefaultState().with(FACING, ctx.getPlayerFacing());
     }
 
 }

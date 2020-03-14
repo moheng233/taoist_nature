@@ -21,8 +21,12 @@ public class BlockReagistry implements ModInitializer {
         public static final String MODID = LegalLogicMod.MODID;//在""中填写Modid
     @Override
 	public void onInitialize() {
+        System.out.println("逻辑法则方块初始化开始");
+
         // Block声明
         Registry.register(Registry.BLOCK, new Identifier(MODID, "lingshi_mine"), LINGSHIMINE);
         Registry.register(Registry.BLOCK, new Identifier(MODID, "portray_table"), PORTRAYTABLE);
+    
+        System.out.println("逻辑法则方块初始化结束");
     }
 }

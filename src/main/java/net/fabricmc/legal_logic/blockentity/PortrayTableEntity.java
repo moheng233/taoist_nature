@@ -2,10 +2,7 @@ package net.fabricmc.legal_logic.blockentity;
 
 import net.fabricmc.legal_logic.BlockEntityReagistry;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 
 public class PortrayTableEntity extends BlockEntity{
 
@@ -19,7 +16,7 @@ public class PortrayTableEntity extends BlockEntity{
 
     @Override
     public void fromTag(CompoundTag tag) {
-        this.pos = new BlockPos(tag.getInt("x"), tag.getInt("y"), tag.getInt("z"));
+        super.fromTag(tag);
         this.Inventory = (CompoundTag) tag.get("Inventory");
         this.Schedule = tag.getDouble("Schedule");
     }
@@ -35,15 +32,7 @@ public class PortrayTableEntity extends BlockEntity{
 
     @Override
     public CompoundTag toTag(CompoundTag tag) {
-        Identifier identifier = BlockEntityType.getId(this.getType());
-        if (identifier == null) {
-            throw new RuntimeException(this.getClass() + " is missing a mapping! This is a bug!");
-        } else {
-            tag.putString("id", identifier.toString());
-            tag.putInt("x", this.pos.getX());
-            tag.putInt("y", this.pos.getY());
-            tag.putInt("z", this.pos.getZ());
-        }
+        super.toTag(tag);
         tag.put("Inventory", Inventory);
         tag.putDouble("Schedule",Schedule);
         return tag;

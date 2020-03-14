@@ -13,6 +13,10 @@ public class ContainerRegistry implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
+        System.out.println("逻辑法则UI初始化开始");
+
+
         ContainerProviderRegistry.INSTANCE.registerFactory(QIANKUNDAG, 
             (syncId, id, player, buf) -> new QiankunDag(syncId, player.inventory));
 
@@ -24,6 +28,7 @@ public class ContainerRegistry implements ModInitializer {
         ScreenProviderRegistry.INSTANCE.registerFactory(PORTRAYTABLE,
             PortrayTableScreen::new);
         
+        System.out.println("逻辑法则UI初始化结束");
     }
     
 }
