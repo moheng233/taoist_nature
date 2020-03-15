@@ -26,7 +26,7 @@ public class PortrayTable extends BaseContainer {
 
     public PortrayTableEntity blockentity;
 
-    public PortrayTable(int synchronizationID, PlayerInventory linkedPlayerInventory,PacketByteBuf buf) {
+    public PortrayTable(int synchronizationID, PlayerInventory linkedPlayerInventory,BlockPos pos) {
         super(synchronizationID, linkedPlayerInventory);
         this.name = new TranslatableText("block.legal_logic.portray_table");
         this.player = linkedPlayerInventory.player;
@@ -35,7 +35,7 @@ public class PortrayTable extends BaseContainer {
         BaseInventory tableinventory = new BaseInventory(3);
 
         if (!this.player.world.isClient) {
-            this.pos = buf.readBlockPos();
+            this.pos = pos;
             blockentity = (PortrayTableEntity) player.world.getBlockEntity(pos);
         }
 

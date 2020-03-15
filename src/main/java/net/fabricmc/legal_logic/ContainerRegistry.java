@@ -26,14 +26,14 @@ public class ContainerRegistry implements ModInitializer {
             QiankunDagScreen::new);
 
         ContainerProviderRegistry.INSTANCE.registerFactory(PORTRAYTABLE, 
-            (syncId,id,player,buf) -> new PortrayTable(syncId, player.inventory,buf));
+            (syncId,id,player,buf) -> new PortrayTable(syncId, player.inventory,buf.readBlockPos()));
         ScreenProviderRegistry.INSTANCE.registerFactory(PORTRAYTABLE,
             PortrayTableScreen::new);
 
         ContainerProviderRegistry.INSTANCE.registerFactory(PROGRAMTABLE, 
-            (syncId,id,player,buf) -> new ProgramTable(syncId, player.inventory, buf));
-        ScreenProviderRegistry.INSTANCE.registerFactory(PORTRAYTABLE, 
-            PortrayTableScreen::new);
+            (syncId,id,player,buf) -> new ProgramTable(syncId, player.inventory, buf.readBlockPos()));
+        ScreenProviderRegistry.INSTANCE.registerFactory(PROGRAMTABLE, 
+            ProgramTableScreen::new);
         
         System.out.println("逻辑法则UI初始化结束");
     }

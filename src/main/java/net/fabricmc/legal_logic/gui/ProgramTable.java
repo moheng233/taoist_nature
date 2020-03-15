@@ -6,6 +6,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.structure.OceanMonumentGenerator.Base;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.PacketByteBuf;
 import net.minecraft.util.math.BlockPos;
 import spinnery.common.BaseContainer;
@@ -23,27 +24,27 @@ public class ProgramTable extends BaseContainer {
     public BlockPos pos;
     public ProgramTableEntity entity;
     public CompoundTag tag;
+    public BaseInventory DiagramInventory;
 
-    public ProgramTable(int synchronizationID, PlayerInventory linkedPlayerInventory,PacketByteBuf buf) {
+    public ProgramTable(int synchronizationID, PlayerInventory linkedPlayerInventory,BlockPos pos) {
         super(synchronizationID, linkedPlayerInventory);
 
         this.player = linkedPlayerInventory.player;
-
-        if (player.world.isClient) {
-            pos = buf.readBlockPos();
-            entity = (ProgramTableEntity) player.world.getBlockEntity(pos);
-        }
+        this.name = new TranslatableText("block.legal_logic.program_table");
 
         WInterface mainInterface = getInterface();
-        BaseInventory DiagramInventory = (BaseInventory) entity.DiagramInventory;
 
-        if (!player.world.isClient){
-
+        if (!player.world.isClient) {
+            this.pos = pos;
+            entity = (ProgramTableEntity) player.world.getBlockEntity(this.pos);
+            DiagramInventory = (BaseInventory) entity.DiagramInventory;
+            
         }
 
-        mainInterface.createChild(WTextField.class);
-
         getInventories().put(BACKPACK_INVENTORY, DiagramInventory);
+
+        mainInterface.createChild(WTextField.class).getText();
+
 
 
     }

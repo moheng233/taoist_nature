@@ -30,7 +30,7 @@ public class ProgramTable extends Table implements BlockEntityProvider {
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
-            ContainerProviderRegistry.INSTANCE.openContainer(ContainerRegistry.PORTRAYTABLE, player, (buffer) -> {
+            ContainerProviderRegistry.INSTANCE.openContainer(ContainerRegistry.PROGRAMTABLE, player, (buffer) -> {
                 buffer.writeBlockPos(pos);
             });
         }
