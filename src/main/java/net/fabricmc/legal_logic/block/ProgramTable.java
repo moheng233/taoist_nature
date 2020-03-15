@@ -1,14 +1,21 @@
 package net.fabricmc.legal_logic.block;
 
+import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
+import net.fabricmc.legal_logic.ContainerRegistry;
 import net.fabricmc.legal_logic.blockentity.ProgramTableEntity;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.EntityContext;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 
 public class ProgramTable extends Table implements BlockEntityProvider {
 
@@ -19,6 +26,15 @@ public class ProgramTable extends Table implements BlockEntityProvider {
     @Override
     public BlockEntity createBlockEntity(BlockView view) {
         return new ProgramTableEntity();
+    }
+
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!world.isClient) {
+            ContainerProviderRegistry.INSTANCE.openContainer(ContainerRegistry.PORTRAYTABLE, player, (buffer) -> {
+                buffer.writeBlockPos(pos);
+            });
+        }
+        return ActionResult.SUCCESS;
     }
 
     @Override

@@ -8,8 +8,11 @@ import net.minecraft.util.Identifier;
 
 public class ContainerRegistry implements ModInitializer {
 
-    public static final Identifier QIANKUNDAG = new Identifier("legal_logic","qiankun_dag");
-    public static final Identifier PORTRAYTABLE = new Identifier("legal_logic","portray_table");
+    public static final String MODID = LegalLogicMod.MODID;
+
+    public static final Identifier QIANKUNDAG = new Identifier(MODID,"qiankun_dag");
+    public static final Identifier PORTRAYTABLE = new Identifier(MODID,"portray_table");
+    public static final Identifier PROGRAMTABLE = new Identifier(MODID, "program_table");
 
     @Override
     public void onInitialize() {
@@ -19,13 +22,17 @@ public class ContainerRegistry implements ModInitializer {
 
         ContainerProviderRegistry.INSTANCE.registerFactory(QIANKUNDAG, 
             (syncId, id, player, buf) -> new QiankunDag(syncId, player.inventory));
-
         ScreenProviderRegistry.INSTANCE.registerFactory(QIANKUNDAG,
             QiankunDagScreen::new);
 
         ContainerProviderRegistry.INSTANCE.registerFactory(PORTRAYTABLE, 
             (syncId,id,player,buf) -> new PortrayTable(syncId, player.inventory,buf));
         ScreenProviderRegistry.INSTANCE.registerFactory(PORTRAYTABLE,
+            PortrayTableScreen::new);
+
+        ContainerProviderRegistry.INSTANCE.registerFactory(PROGRAMTABLE, 
+            (syncId,id,player,buf) -> new ProgramTable(syncId, player.inventory, buf));
+        ScreenProviderRegistry.INSTANCE.registerFactory(PORTRAYTABLE, 
             PortrayTableScreen::new);
         
         System.out.println("逻辑法则UI初始化结束");

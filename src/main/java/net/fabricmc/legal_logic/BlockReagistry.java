@@ -21,7 +21,7 @@ public class BlockReagistry implements ModInitializer {
         FabricBlockSettings.of(Material.METAL).build()
     );
     public static final Magic MAGIC = new Magic(
-        FabricBlockSettings.of(Material.METAL).build()
+        FabricBlockSettings.of(Material.PART).build()
     );
     
 
