@@ -1,8 +1,0 @@
-{  
-    "variants": {
-        "facing=north": { "model": "legal_logic:block/portray_table" },
-        "facing=east":  { "model": "legal_logic:block/portray_table", "y":  90},
-        "facing=south": { "model": "legal_logic:block/portray_table", "y": 180 },
-        "facing=west":  { "model": "legal_logic:block/portray_table", "y": 270 }
-    }
-}

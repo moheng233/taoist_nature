@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "legal_logic",
+  "id": "taoist_nature",
   "version": "1.0.0",
 
-  "name": "Legal Logic",
+  "name": "Taoist Nature",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -14,22 +14,24 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/legal_logic/icon.png",
+  "icon": "assets/taoist_nature/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.legal_logic.LegalLogicMod",
-      "net.fabricmc.legal_logic.ItemReagistry",
-      "net.fabricmc.legal_logic.BlockReagistry",
-      "net.fabricmc.legal_logic.BlockEntityReagistry",
-      "net.fabricmc.legal_logic.ContainerRegistry"
+      "xyz.moheng.taoist_nature.LegalLogicMod",
+      "xyz.moheng.taoist_nature.ItemReagistry",
+      "xyz.moheng.taoist_nature.BlockReagistry",
+      "xyz.moheng.taoist_nature.BlockEntityReagistry",
+      "xyz.moheng.taoist_nature.ContainerRegistry"
     ],
     "client": [
-      "net.fabricmc.legal_logic.LegalLogicModClient"
+      "xyz.moheng.taoist_nature.BlockEntityRenderersReagistry",
+      "xyz.moheng.taoist_nature.LegalLogicModClient"
     ],
     "server": [
-      "net.fabricmc.legal_logic.LegalLogicModServer"
+      "xyz.moheng.taoist_nature.LegalLogicModServer"
+      
     ]
   },
   "depends": {

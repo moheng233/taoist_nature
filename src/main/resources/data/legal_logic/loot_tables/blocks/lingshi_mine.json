@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "legal_logic:lingshi_mine"
+                    "name": "taoist_nature:lingshi_mine"
                 }
             ],
             "conditions": [

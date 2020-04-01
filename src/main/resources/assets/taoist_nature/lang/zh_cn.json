@@ -1,0 +1,21 @@
+{
+    "itemGroup.taoist_nature.base_group": "道法自然",
+    "itemGroup.taoist_nature.magic_group": "术法",
+    "item.taoist_nature.lingshi_powder": "灵石粉末",
+    "item.taoist_nature.lingshi_powder.tooltip-1": "挖掘下来的灵石磨制成的粉末",
+    "item.taoist_nature.lingshi_powder.tooltip-2": "可以缓慢的吸收周围空气中的灵气",
+    "item.taoist_nature.lingshi": "%s灵石",
+    "item.taoist_nature.lingshi.tooltip-1": "品阶：%s",
+    "item.taoist_nature.lingshi.tooltip-2": "完整度：%d%%",
+    "item.taoist_nature.lingshi.quality-0": "损坏的",
+    "item.taoist_nature.lingshi.quality-4": "天阶",
+    "item.taoist_nature.lingshi.quality-3": "地阶",
+    "item.taoist_nature.lingshi.quality-2": "玄阶",
+    "item.taoist_nature.lingshi.quality-1": "黄阶",
+    "item.taoist_nature.qiankun_dag":"乾坤袋",
+    "item.taoist_nature.matrixmethod_diagran": "阵法设计图",
+    "block.taoist_nature.lingshi_mine": "灵石矿",
+    "block.taoist_nature.portray_table": "灵阵刻画台",
+    "block.taoist_nature.program_table": "灵阵编程台",
+    "block.taoist_nature.magic": "阵"
+}

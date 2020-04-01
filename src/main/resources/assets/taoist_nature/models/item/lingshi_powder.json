@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "taoist_nature:item/lingshi_powder"
+    }
+}
