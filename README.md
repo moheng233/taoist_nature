@@ -1,5 +1,6 @@
-# Fabric Example Mod
-
+# 道法自然
+一个以符文自动化为主题的中国风修仙mod
+（谁说修仙非要pvp？！科技才是第一生产力！）
 ## Setup
 
 1. Edit build.gradle and mod.json to suit your needs.
