@@ -23,7 +23,11 @@
       "xyz.moheng.taoist_nature.ItemReagistry",
       "xyz.moheng.taoist_nature.BlockReagistry",
       "xyz.moheng.taoist_nature.BlockEntityReagistry",
-      "xyz.moheng.taoist_nature.ContainerRegistry"
+      "xyz.moheng.taoist_nature.ContainerRegistry",
+      {
+        "adapter": "kotlin",
+        "value": "xyz.moheng.taoist_nature.ModInitKt::init"
+      }
     ],
     "client": [
       "xyz.moheng.taoist_nature.BlockEntityRenderersReagistry",
@@ -37,7 +41,8 @@
   "depends": {
     "fabricloader": ">=0.4.0",
     "fabric": "*",
-    "minecraft": "1.15.x"
+    "minecraft": "1.15.x",
+    "fabric-language-kotlin": "*"
   },
   "suggests": {
     "flamingo": "*"

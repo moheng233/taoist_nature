@@ -65,7 +65,7 @@ public class PortrayTable extends BaseContainer {
 
         // WSlot.addHeadlessArray(mainInterface, 0, BACKPACK_INVENTORY, 3, 1);
         WSlot.addHeadlessPlayerInventory(mainInterface);
-
+        
         if(!this.player.world.isClient){
 
             // for (WAbstractWidget o:mainInterface.getAllWidgets()) {
