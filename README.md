@@ -2,7 +2,7 @@
 一个以符文自动化为主题的中国风修仙mod
 （谁说修仙非要pvp？！科技才是第一生产力！）
 
-这是个开发分支
+这是个主分支
 ## Setup
 
 1. Edit build.gradle and mod.json to suit your needs.
