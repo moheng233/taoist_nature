@@ -5,6 +5,14 @@ pluginManagement {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
+        maven {
+			name = "Spinnery"
+			url  "https://dl.bintray.com/spinnery/Spinnery"
+		}
+		maven {
+			name = "Onyx Studios"
+			url = "https://maven.onyxstudios.dev"
+		}
         gradlePluginPortal()
     }
 }

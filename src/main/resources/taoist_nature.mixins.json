@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.fabricmc.example.mixin",
+  "package": "xyz.moheng.taoist_nature.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],

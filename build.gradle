@@ -23,6 +23,10 @@ repositories {
 			name = "Spinnery"
 			url  "https://dl.bintray.com/spinnery/Spinnery"
 		}
+		maven {
+			name = "Onyx Studios"
+			url = "https://maven.onyxstudios.dev"
+		}
     }
 
 dependencies {
@@ -32,12 +36,18 @@ dependencies {
 	modCompile "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	//modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	
-	modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+	// modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+
+	modImplementation "io.github.prospector:modmenu:1.10.2+build.32"
 
 	modCompile "com.github.vini2003:spinnery:${project.spinnery_version}"
 	include "com.github.vini2003:spinnery:${project.spinnery_version}"
+
+	modImplementation "com.github.NerdHubMC:Cardinal-Components-API:${project.cardinal_version}"
+	include "com.github.NerdHubMC:Cardinal-Components-API:${project.cardinal_version}"
+	modApi "com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-base:${project.cardinal_base_version}"
 
 	//modCompile "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
 	//include "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
@@ -80,8 +90,6 @@ jar {
 	from "LICENSE"
 }
 
-
-
 // configure the maven publication
 publishing {
 	publications {
@@ -102,3 +110,4 @@ publishing {
 		// mavenLocal()
 	}
 }
+

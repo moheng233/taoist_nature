@@ -15,7 +15,6 @@
 
   "license": "CC0-1.0",
   "icon": "assets/taoist_nature/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -23,11 +22,7 @@
       "xyz.moheng.taoist_nature.ItemReagistry",
       "xyz.moheng.taoist_nature.BlockReagistry",
       "xyz.moheng.taoist_nature.BlockEntityReagistry",
-      "xyz.moheng.taoist_nature.ContainerRegistry",
-      {
-        "adapter": "kotlin",
-        "value": "xyz.moheng.taoist_nature.ModInitKt::init"
-      }
+      "xyz.moheng.taoist_nature.ContainerRegistry"
     ],
     "client": [
       "xyz.moheng.taoist_nature.BlockEntityRenderersReagistry",
@@ -35,14 +30,12 @@
     ],
     "server": [
       "xyz.moheng.taoist_nature.LegalLogicModServer"
-      
     ]
   },
   "depends": {
     "fabricloader": ">=0.4.0",
     "fabric": "*",
-    "minecraft": "1.15.x",
-    "fabric-language-kotlin": "*"
+    "minecraft": "1.15.x"
   },
   "suggests": {
     "flamingo": "*"
